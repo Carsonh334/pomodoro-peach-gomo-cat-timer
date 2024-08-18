@@ -36,7 +36,7 @@ def start_timer():
     long_break_sec = LONG_BREAK_MIN * 60
 
     if current_time > 0:
-        if reps % 4 == 0:
+        if reps % 8 == 0:
             title_label.config(text="  Long Break  ", fg=RED)
             canvas.itemconfig(cat_image, image=cat_sleep)
             canvas.itemconfig(timer_text, fill=RED)
