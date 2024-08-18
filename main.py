@@ -7,9 +7,9 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 0.1
-SHORT_BREAK_MIN = 0.1
-LONG_BREAK_MIN = 0.1
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 15
 reps = 0
 timer = None
 current_time = 0
@@ -49,7 +49,7 @@ def start_timer():
             canvas.itemconfig(cat_image, image=cat_studying)
             canvas.itemconfig(timer_text, fill=GREEN)
         count_down(current_time)
-    elif reps % 4 == 0:
+    elif reps % 8 == 0:
         count_down(long_break_sec)
         title_label.config(text="  Long Break  ", fg=RED)
         canvas.itemconfig(cat_image, image=cat_sleep)
